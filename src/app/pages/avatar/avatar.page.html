@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar>
+
+    <ion-buttons slot= "start"  >
+      <ion-back-button defaultHref="/" text="Regresar" color="primary" mode="ios" > </ion-back-button>
+    </ion-buttons>
+
+    <ion-title mode="ios" color="primary" >Avatar</ion-title>
+
+    <ion-buttons slot="end">
+      <ion-avatar>
+        <img src="/assets/stan-lee.jpg" />
+      </ion-avatar>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+<!-- lista chip -->
+  <ion-chip color="primary" mode="ios" outline="true">
+    <ion-avatar>
+      <img src="/assets/stan-lee.jpg" />
+    </ion-avatar>
+    <ion-label>Default</ion-label>
+  </ion-chip>
+<!--
+  lista avatar -->
+  <ion-list>
+    <ion-item>
+      <ion-avatar slot= "start">
+        <img src="/assets/stan-lee.jpg" />
+      </ion-avatar>
+
+      <ion-label>stan lee</ion-label>
+
+    </ion-item>
+  </ion-list>
+</ion-content>

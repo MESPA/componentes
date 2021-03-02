@@ -22,9 +22,19 @@ export class InicioPage implements OnInit {
       redirectTo: '/action-sheet'
     },
     {
-      icon:'football-outline',
+      icon:'alert-circle-outline',
       name:'Alert',
       redirectTo: '/alert'
+    },
+    {
+      icon:'beaker-outline',
+      name:'Avatar',
+      redirectTo: '/avatar'
+    },
+    {
+      icon:'radio-button-off-sharp',
+      name:'Button',
+      redirectTo: '/button'
     }
   ];
 

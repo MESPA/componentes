@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActionSheetController } from '@ionic/angular';
 
 @Component({
   selector: 'app-action-sheet',
@@ -7,9 +8,55 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ActionSheetPage implements OnInit {
 
-  constructor() { }
+  constructor(private actionsheetCtr : ActionSheetController ) { }
 
   ngOnInit() {
   }
+
+  onClick() {this.presentActionSheet();}
+    async presentActionSheet() {
+      const actionSheet = await this.actionsheetCtr.create({
+        header: 'Albunes',
+        //evitar cerrar el actionsheet presionando afuera
+        backdropDismiss: false,
+
+        buttons: [{
+          text: 'Delete',
+          role: 'destructive-outline',
+          icon: 'trash',
+          cssClass:'rojo',
+          handler: () => {
+            console.log('Delete clicked');
+          }
+        }, {
+          text: 'Share',
+          icon: 'share-outline',
+          handler: () => {
+            console.log('Share clicked');
+          }
+        }, {
+          text: 'Play (open modal)',
+          icon: 'caret-forward-circle-outline',
+          handler: () => {
+            console.log('Play clicked');
+          }
+        }, {
+          text: 'Favorite',
+          icon: 'heart-outline',
+          handler: () => {
+            console.log('Favorite clicked');
+          }
+        }, {
+          text: 'Cancel',
+          icon: 'close-outline',
+          role: 'cancel',
+          handler: () => {
+            console.log('Cancel clicked');
+          }
+        }]
+      });
+      await actionSheet.present();
+    }
+
 
 }
