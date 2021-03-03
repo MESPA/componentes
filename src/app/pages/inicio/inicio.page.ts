@@ -35,6 +35,11 @@ export class InicioPage implements OnInit {
       icon:'radio-button-off-sharp',
       name:'Button',
       redirectTo: '/button'
+    },
+    {
+      icon:'radio-button-off-sharp',
+      name:'Card',
+      redirectTo: '/card'
     }
   ];
 
