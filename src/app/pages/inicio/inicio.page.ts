@@ -40,6 +40,11 @@ export class InicioPage implements OnInit {
       icon:'radio-button-off-sharp',
       name:'Card',
       redirectTo: '/card'
+    },
+    {
+      icon:'checkmark-done-circle-outline',
+      name:'Check',
+      redirectTo: '/check'
     }
   ];
 
